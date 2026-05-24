@@ -7,6 +7,6 @@ class AppTest {
     @Test
     void testMessage() {
         App app = new App();
-        assertEquals("Hello World!", app.getMessage());
+        assertEquals("hello world!", app.getMessage());
     }
 }

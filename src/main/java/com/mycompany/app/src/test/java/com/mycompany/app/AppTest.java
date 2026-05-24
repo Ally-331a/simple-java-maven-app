@@ -8,4 +8,4 @@ class AppTest {
         App app = new App();
         assertEquals("hello world!", app.getMessage());
     }
-}
+

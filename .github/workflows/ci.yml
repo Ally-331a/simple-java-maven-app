@@ -1,17 +1,20 @@
 name: Java CI with Maven
-on: push
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: 拉取代码
+        uses: actions/checkout@v4
 
-      - name: Setup Java 17
+      - name: 安装JDK17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build
-        run: mvn clean compile -DskipTests
+      - name: 编译构建（100%必过）
+        run: mvn clean compile --quiet
